@@ -39,32 +39,33 @@ public class Pedido {
        return item; 
    }
    public ArrayList<Double> ValorItens(){
-       double cont1 = 0, cont2 = 0, cont3 = 0;
+       double c1 = 0, c2 = 0, c3 = 0;
        for (int i = 0; i < this.produto.size(); i++) {
            if(this.produto.get(i) instanceof Paozinho){
-               cont1 = this.produto.get(i).getPreco()+cont1;
+               c1 = this.produto.get(i).getPreco()+c1;
            }else{
                if(this.produto.get(i) instanceof Doce){
-                   cont2 = this.produto.get(i).getPreco()+cont2;
+                   c2 = this.produto.get(i).getPreco()+c2;
                }else{
                    if(this.produto.get(i) instanceof Frios){
-                       cont3 = this.produto.get(i).getPreco()+cont3;
+                       c3 = this.produto.get(i).getPreco()+c3;
                    }
                }
            }
        }
        ArrayList<Double> item = new ArrayList();
-       item.add(cont1);
-       item.add(cont2);
-       item.add(cont3);
+       item.add(c1);
+       item.add(c2);
+       item.add(c3);
        return item; 
    }
-   public double TempoTotal(){
-       double tempo = 0;
+   public double TempoTotal(String dia){
+       double t = 0;
        for (int i = 0; i < this.produto.size(); i++) {
-           tempo = tempo + this.produto.get(i).tempo;
+           this.produto.get(i).Vproducao(dia);
+           t= this.produto.get(i).getTempo()+ t;
        }
-       return tempo;
+       return t;
    }
 
    public ArrayList<Produto> getProduto() {

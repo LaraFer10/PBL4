@@ -7,8 +7,8 @@ public class Produto {
     protected int validade;
     protected double tempo;
     
-    public double Vproducao(String dia){
-        return 0;
+    public void Vproducao(String dia){
+        
     }
 
     public double getPreco() {

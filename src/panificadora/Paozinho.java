@@ -5,11 +5,10 @@ public class Paozinho extends Produto{
     private String sabor;
 
     @Override
-    public double Vproducao(String dia){
-      if("Sabado".equals(dia)&&"Domingo".equals(dia)){
-         return this.tempo*1.15;
+    public void Vproducao(String dia){
+      if("sabado".equals(dia)||"domingo".equals(dia)){
+        this.setTempo(this.tempo*1.15);
       }
-        return 0;
     }
     public String getSabor() {
         return sabor;
@@ -18,8 +17,5 @@ public class Paozinho extends Produto{
     public void setSabor(String sabor) {
         this.sabor = sabor;
     }
-    @Override
-     public void setPreco(double preco) {
-        this.preco = 2;
-    }
+    
 }
