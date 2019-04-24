@@ -3,6 +3,10 @@ package panificadora;
 
 public class Paozinho extends Produto{
     private String sabor;
+    
+    public Paozinho(){
+        this.tempo = 2.0;
+    }
 
     @Override
     public void Vproducao(String dia){

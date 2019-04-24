@@ -10,13 +10,10 @@ public class Panificadora {
         Produto prod = new Produto();
         Doce doce = new Doce();
         doce.setPreco(25.0);
-        doce.setTempo(5.0);
         Frios frio = new Frios();
         frio.setPreco(10.0);
-        frio.setTempo(6.0);
         Paozinho pao = new Paozinho();
         pao.setPreco(30.0);
-        pao.setTempo(2.0);
         prod = (Produto) frio;
         prod = (Produto) pao;
         prod = (Produto) doce;

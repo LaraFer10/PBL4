@@ -5,6 +5,9 @@ package panificadora;
 public class Doce extends Produto{
     private String tipoDoce;
     
+    public Doce(){
+        this.tempo = 5.0;
+    }
     @Override
     public void Vproducao(String dia){
       if("sabado".equals(dia)||"domingo".equals(dia)){
